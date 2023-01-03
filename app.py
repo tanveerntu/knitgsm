@@ -19,6 +19,8 @@
 
 from pycaret.regression import load_model
 from pycaret.regression import predict_model
+from catboost import CatBoostRegressor
+
 
 import streamlit as st
 import pandas as pd
