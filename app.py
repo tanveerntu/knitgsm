@@ -6,15 +6,7 @@
 # this file will be run in anaconda command prompt using command: streamlit run comfort_using_pkl.py
 # the same file can then be deployed on internet web using streamlit sharing
 
-# ---- HIDE STREAMLIT STYLE ----
-#hide_st_style = """
-#            <style>
-#            #MainMenu {visibility: hidden;}
-#            footer {visibility: hidden;}
-#            header {visibility: hidden;}
-#            </style>
-#            """
-#st.markdown(hide_st_style, unsafe_allow_html=True)
+
 
 
 from pycaret.regression import load_model
@@ -26,6 +18,16 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+
+# ---- HIDE STREAMLIT STYLE ----
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # to load the models from the same PC folder where this .py file is saved.
 # It is assumed that the models with .pkl extension are already saved in the same folder
